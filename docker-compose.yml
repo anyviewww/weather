@@ -2,17 +2,18 @@ version: '3.8'
 
 services:
   backend:
-    build: ./backend
+    build:
+      context: ./backendside
     ports:
       - "8080:8080"
-    restart: always
+    environment:
+      - OPENWEATHER_API_KEY=${OPENWEATHER_API_KEY}
+      - PORT=8080
 
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontendside
     ports:
       - "3000:3000"
-    environment:
-      - CHOKIDAR_USEPOLLING=true
     depends_on:
       - backend
-    restart: always
