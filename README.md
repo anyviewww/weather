@@ -1,21 +1,13 @@
-# weather
-## Запуск проекта
-* Убедитесь, что у вас установлены Docker и Docker Compose.
+# Weather App
 
-* Перейдите в корневую папку проекта (weather-app).
+A service for displaying the current temperature and time in a selected city.
 
-* Замените your_openweathermap_api_key в файле backend/app.go на ваш API-ключ от OpenWeatherMap.
+## Launch
 
-* Выполните команду:
-"docker-compose up --build"
+1. Get an API key on [OpenWeatherMap](https://openweathermap.org/api)
+2. Replace `your_api_key_here` in docker-compose.yml with your key
+3. Run:
+```bash
+docker-compose up --build
 
-## После сборки и запуска контейнеров:
-
-### Бекенд будет доступен на http://localhost:8080.
-* Бекенд на Go возвращает текущее время и температуру для указанного города.
-
-### Фронтенд будет доступен на http://localhost:3000.
-* Фронтенд на React отображает время, город и температуру на странице.
-
-### Чтобы остановить проект, выполните в терминале:
-"docker-compose down"
+Open: http://localhost:3000
