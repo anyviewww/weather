@@ -15,7 +15,7 @@ A service for displaying the current temperature and time in a selected city.
 In the root directory of the project, create a file named .env and add your OpenWeather API key:
 ```bash
 OPENWEATHER_API_KEY=your_api_key_here
-
+```
 Replace your_api_key_here with your actual API key.
 
 ### 2) Verify .gitignore
